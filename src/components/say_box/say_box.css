@@ -1,0 +1,55 @@
+.say-box .weui-media-box_appmsg {
+    align-items: stretch;
+}
+
+.say-box .weui-media-box_appmsg .weui-media-box__hd {
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.say-box .weui-media-box_appmsg .weui-media-box__thumb {
+    border-radius: 50%;
+}
+
+.say-box .weui-media-box__title {
+    font-size: 14px;
+}
+
+.say-box .weui-media-box__desc {
+    font-size: 14px;
+    line-height: 2;
+    -webkit-line-clamp: 6;
+}
+
+.say-box .weui-cell {
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.say-box .weui-cell:before {
+    left: 0;
+    border-width: 0;
+}
+
+.book-box.weui-media-box {
+    padding: 5px;
+    border: solid 1px #eee;
+    border-radius: 5px;
+}
+
+.book-box.weui-media-box:before {
+    border-width: 0;
+}
+
+.book-box.weui-media-box_appmsg .weui-media-box__hd {
+    margin-top: 0;
+    width: 40px;
+    height: 50px;
+    line-height: 30px;
+}
+
+.book-box.weui-media-box_appmsg .weui-media-box__thumb {
+    border-radius: 0;
+}

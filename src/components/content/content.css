@@ -1,0 +1,8 @@
+.content-box {
+    position: absolute;
+    top: 44px;
+    right: 0;
+    bottom: 53px;
+    left: 0;
+    overflow: auto;
+}

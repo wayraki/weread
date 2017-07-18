@@ -1,0 +1,66 @@
+@import url(../public/css/function.css);
+@import url(../public/css/font-awesome-4.7.0/css/font-awesome.min.css);
+#root {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+
+/*home*/
+
+.weui-loadmore {
+    width: 80%;
+}
+
+.weui-loadmore_line .weui-loadmore__tips {
+    font-size: 12px;
+    top: -1em;
+}
+
+.say-content .title>span {
+    font-size: 14px;
+}
+
+.me-content .user-img {
+    text-align: center;
+    background-color: white;
+}
+
+.me-content .user-img img {
+    margin-top: 20px;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+.me-content .user-img p {
+    padding: 20px;
+}
+.me-content .weui-cell{
+        height: 2.5rem;
+}
+
+
+/*public*/
+.fcb{color: #1b88ee;}
+.fc6{color: #666;}
+.fc9{color: #999;}
+
+.fs12{font-size: 12px;}
+.fs14{font-size: 14px;}
+.fs16{font-size: 16px;}
+.fs18{font-size: 18px;}
+.fs20{font-size: 20px;}
+.fs22{font-size: 22px;}
+.fs24{font-size: 24px;}
+
+.read-img{
+    overflow: auto
+}
+.read-img .weui-gallery__img{
+        background-size: 100%;
+            bottom: 0;
+}
