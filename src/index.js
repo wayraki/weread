@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import { createLogger } from 'redux-logger'
+import App from './App';
+import reducers from './redux/reducers';
+import './index.css';
+import registerServiceWorker from './registerServiceWorker';
 
-import Main from './main';
-import Home from './home';
-import Bookcity from './containers/bookcity';
-import './style.css';
-
-let routes = <Route path="/" component={Main}>
-    <IndexRoute component={Home} />
-    <Route path="/bookcity" component={Bookcity} />
-</Route>;
+const store = createStore(reducers, applyMiddleware(thunk,createLogger()))
 
 ReactDOM.render(
-    <Router routes={routes} history={hashHistory} />, document.getElementById('root'));
+    <Provider store={store}>
+        <App />
+    </Provider>, document.getElementById('root'));
+registerServiceWorker();

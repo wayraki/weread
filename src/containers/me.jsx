@@ -1,5 +1,4 @@
-import React from 'react';
-import Reflux from 'reflux';
+import React, { Component } from 'react'
 import {
     Panel,
     Cell,
@@ -8,24 +7,44 @@ import {
     CellFooter,
 } from 'react-weui';
 
-import Actions from '../actions';
-import Stores from '../stores';
-
 import Content from '../components/content';
-import icon_1 from '../../public/image/icon/me_1.png';
-import icon_2 from '../../public/image/icon/me_2.png';
-import icon_3 from '../../public/image/icon/me_3.png';
-import icon_4 from '../../public/image/icon/me_4.png';
-import icon_5 from '../../public/image/icon/me_5.png';
-import icon_6 from '../../public/image/icon/me_6.png';
+import icon_1 from '../static/image/icon/me_1.png';
+import icon_2 from '../static/image/icon/me_2.png';
+import icon_3 from '../static/image/icon/me_3.png';
+import icon_4 from '../static/image/icon/me_4.png';
+import icon_5 from '../static/image/icon/me_5.png';
+import icon_6 from '../static/image/icon/me_6.png';
 
-export default class Discover extends Reflux.Component {
+export default class Discover extends Component {
     constructor() {
         super();
-        this.store = Stores;
+        this.state={
+            userInfo: {
+                userName: 'wayraki',
+                userAccount: {
+                    balance: 20.08,
+                    giveaway: 8.00,
+                    purchase: [{}, {}, {}, {}, {}, {}, {}, {}]
+                },
+                ranking: {
+                    placing: 1,
+                    time: 248,
+                    rankList: [{}, {}, {}, {}, {}, {}]
+                },
+                concern: {
+                    concerned: [{}, {}, {}, {}, {}, {}],
+                    beConcerned: [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}]
+                },
+                note: {
+                    tatol: 5,
+                    praise: 15,
+                    comment: 8
+                },
+                bookMenu: [{}]
+            }
+        }
     }
     componentDidMount() {
-        Actions.getUserInfo();
     }
     render() {
         let userInfo = this.state.userInfo;
