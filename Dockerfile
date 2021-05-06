@@ -1,10 +1,10 @@
 FROM node:latest
 WORKDIR /srv
 
-COPY package.json ./
-COPY data ./
-COPY public ./
-COPY src ./
+COPY package.json /srv/
+COPY data /srv/
+COPY public /srv/
+COPY src /srv/
 
-RUN yarn \
-  && yarn start
+RUN npm install \
+  && npm start
