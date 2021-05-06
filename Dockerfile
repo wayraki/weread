@@ -1,10 +1,10 @@
-FROM node:latest AS installer
+FROM node:latest
 WORKDIR /srv
 
 COPY package.json ./
-COPY data data ./
-COPY public public ./
-COPY src src ./
+COPY data ./
+COPY public ./
+COPY src ./
 
 RUN yarn \
   && yarn start
