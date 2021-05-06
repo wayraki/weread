@@ -1,7 +1,7 @@
 FROM node:latest AS installer
 WORKDIR /srv
 
-COPY package.json yarn.lock ./
+COPY package.json ./
 COPY data data ./
 COPY public public ./
 COPY src src ./
